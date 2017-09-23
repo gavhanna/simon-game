@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="control-box">
+      <div class="title">SIMON</div>
+      <div id="controls">
+        <div class="count"><span id="count">--</span></div>
+        <div id="start">
+          <span>START</span> 
+          <div id="start-button"></div>
+        </div>
+        <div id="strict">
+          <div class="strict-light"></div>
+          <span>
+            STRICT
+          </span>
+          <div id="strict-button"></div>
+        </div>
+      </div>
+      <div id="on-off">
+        <label class="switch">
+          <input id="power-switch" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div id="board">
+      <div class="square square1" id="0"></div>
+      <div class="square square2" id="1"></div>
+      <div class="square square3" id="2"></div>
+      <div class="square square4" id="3"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
