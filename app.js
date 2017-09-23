@@ -37,6 +37,7 @@ function strictModeButton() {
 }
 
 function startGame() {
+  startButton.removeEventListener("click", startGame, false);
   gameOn(gameArray, count);  
   counter.innerText = count < 10 ? "0" + (count) : count;
 }
@@ -143,6 +144,7 @@ function resetGame() {
   counter.innerText = count < 10 ? "0" + (count) : count;
   counter.style.color = "rgba(87, 3, 3, 0.66)";
   startButton.removeEventListener("click", startGame, false);
+  strictButton.removeEventListener("click", strictModeButton, false);
   counter.innerText = "--";
   gameArray = createGameArray(20);
   currentRoundArray = [];
