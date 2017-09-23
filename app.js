@@ -16,9 +16,6 @@ let strictMode = false;
 
 powerSwitch.addEventListener("change", switchOn, false);
 
-console.log(gameArray);
-
-
 function switchOn() {
   if (this.checked) {
     counter.style.color = "rgba(231, 5, 5, 0.66)";
@@ -26,15 +23,6 @@ function switchOn() {
     strictButton.addEventListener("click", strictModeButton, false);
   } else  {
     resetGame();
-    // counter.style.color = "rgba(87, 3, 3, 0.66)";
-    // startButton.removeEventListener("click", startGame, false);
-    // counter.innerText = "--";
-    // gameArray = createGameArray(20);
-    // currentRoundArray = [];
-    // guessArray = [];
-    // count = 1;
-    // strictLight.classList.remove("strict-light-on");
-    // strictMode = false;
   }
 }
 
@@ -52,19 +40,6 @@ function startGame() {
   gameOn(gameArray, count);  
   counter.innerText = count < 10 ? "0" + (count) : count;
 }
-
-// function createGameArray(number) {
-//   const gameArray = []
-//   for (let i = 1; i <= number; i++) {
-//     let arr = [];
-//     for (let j = 0; j < i; j++) {
-//       let randomNum = Math.floor(Math.random() * 4);
-//       arr.push(randomNum);
-//     }
-//     gameArray.push(arr);
-//   }
-//   return gameArray;
-// }
 
 function createGameArray(number) {
   const gameArray = []
@@ -98,15 +73,8 @@ function performRound(arr) {
 
 function humanInput(id) {
   guessArray.push(id);
-  console.log(guessArray);
-  
-  // if (checkGameWon()) {
-  //   gameOver();
-  //   return;
-  // }
   if (compareArrays()) {
     count++;
-    console.log(count);
     guessArray = [];
     if (checkGameWon()) {
       gameOver();
@@ -119,10 +87,8 @@ function humanInput(id) {
 function compareArrays() {
   if (guessArray.length === currentRoundArray.length) {
     if (guessArray.toString() == currentRoundArray.toString()) {
-      console.log("same");
       return true;
     } else {
-      console.log("not the same");
       incorrectGuess();
       return false;
     }
@@ -152,7 +118,6 @@ function incorrectGuess() {
 
 function checkGameWon() {
   if (count === gameArray.length + 1) {
-    console.log("YOU WON");
     return true;
   } else {
     return false;
