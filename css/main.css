@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: "Changa One";
+  color: #333;
 }
 
 
@@ -12,8 +14,6 @@
 }
 
 #wrapper, #board {
-  font-family: "Changa One";
-  color: #333;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -76,14 +76,23 @@
   border-bottom-right-radius: 100%;
 }
 
-#control-box {
+#controls-wrapper {
   position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#control-box {
+  margin: 0 auto;
+  /* //position: absolute; */
   border: 20px solid #333;
   border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  margin-top: -120px;
-  margin-left: -120px;
+  /* top: 50%; */
+  /* margin-top: -120px;
+  margin-left: -120px; */
   width: 200px;
   height: 200px;
   text-align: center;
