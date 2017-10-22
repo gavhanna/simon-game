@@ -3,7 +3,9 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
 
 #start, #strict, #on-off, .square {
   cursor: pointer;
@@ -19,7 +21,14 @@
   background: #333;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #board {
+  max-height: 100vw;
   max-width: 100vh;
   margin: 0 auto;
   border-radius: 50%;
